@@ -1,0 +1,110 @@
+.formulario-donacion {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.formulario-donacion h2 {
+  text-align: center;
+  color: #2c5530;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.campo {
+  margin-bottom: 25px;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.campo textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.btn-donar {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(45deg, #4caf50, #8bc34a);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-donar:hover:not(:disabled) {
+  background: linear-gradient(45deg, #45a049, #7cb342);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+.btn-donar:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.mensaje-exito {
+  text-align: center;
+  background: #4caf50;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.error {
+  color: #d32f2f;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+/* Estilos específicos para los selects */
+.campo select {
+  background: white;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .formulario-donacion {
+    padding: 20px 15px;
+  }
+  
+  .formulario-donacion h2 {
+    font-size: 2em;
+  }
+}

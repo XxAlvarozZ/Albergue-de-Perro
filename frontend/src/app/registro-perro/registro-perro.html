@@ -1,0 +1,42 @@
+<div class="registro-container">
+  <div class="formulario-registro">
+    <h2>REGISTRO</h2>
+    
+    <form [formGroup]="registroForm" (ngSubmit)="registrarPerro()">
+      
+      <div class="campo">
+        <label>NOMBRE</label>
+        <input type="text" formControlName="nombre" placeholder="Ingresa el nombre">
+      </div>
+
+      <div class="campo">
+        <label>TAMAÑO</label>
+        <select formControlName="tamano">
+          <option value="">Seleccione tamaño</option>
+          <option value="pequeño">Pequeño</option>
+          <option value="mediano">Mediano</option>
+          <option value="grande">Grande</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label>RAZA</label>
+        <input type="text" formControlName="raza" placeholder="Ingresa la raza">
+      </div>
+
+      <div class="campo">
+        <label>EDAD</label>
+        <input type="number" formControlName="edad" placeholder="Edad en años" min="0" max="30">
+      </div>
+
+      <button type="submit" class="btn-confirmar" [disabled]="registroForm.invalid">
+        CONFIRMAR
+      </button>
+
+    </form>
+
+    <button class="btn-volver" (click)="volverInicio()" style="background: red; color: white;">
+    ← Volver Inicio
+    </button>
+  </div>
+</div>
